@@ -30,6 +30,7 @@ def test_petfriends(web_browser):
      #verify that the user can see the all_pets page:
     assert web_browser.current_url == 'https://petfriends1.herokuapp.com/all_pets'
     # Make the screenshot of browser window:
-    page.save_screenshot('result_petfriends.png')
+
+    web_browser.save_screenshot('petfriends.png')
 
 
