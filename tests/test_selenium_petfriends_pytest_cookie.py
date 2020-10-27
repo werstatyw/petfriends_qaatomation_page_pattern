@@ -26,13 +26,13 @@ from pages.elements import ManyWebElements
 from selenium.webdriver.common.action_chains import ActionChains
 
 def test_petfriends(web_browser):
-    """ Authorize to Petfriends via cookies and create a screenshot when loginpage is successfull """
+    """ Authorize to Petfriends via cookies and create a screenshot when loginpage is successfull. """
+
     page = MainPage(web_browser)
-     #verify that the user can see the all_pets page:
-    assert web_browser.current_url == 'https://petfriends1.herokuapp.com/all_pets'
-    #Scroll down till the end using actionchains and click on the last image
-    page.last_pet.scroll_to_element()
-    page.last_pet.click()
+
+    # Scroll down till the end using actionchains and click on the last image
+    page.scroll_down()
+
     # Make the screenshot of browser window:
     page._web_driver.save_screenshot('petfriends.png')
 
